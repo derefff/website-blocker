@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<style>
+			body{
+				width: 250px;
+				min-height: 30px;
+			}
+			
+			#list-sites {
+				resize: none;
+			}
+
+			#block-domain, #block-page {
+				margin-top: 5px;
+				min-width: 120px;
+				clear:both;
+			}
+
+			#updated{
+				color: green;
+				margin-left: 10px;	
+				font-size: 1.2em;	
+				font-weight: bolder;	
+				opacity: 0
+			}
+
+			.dark-mode{
+				color: #EEE;
+				background-color: #111111;	
+
+			}
+			.dark-mode #list-sites{
+				background: #222222;	
+				color: #EEE;
+			}
+
+			#dark-mode-toggle{
+				float:right;
+			}
+
+
+		</style>
+
+	</head>
+	<body>
+		<div id="buttons">
+			<input type="checkbox" id="hide-blocked-sites"> <label id="hide-label" for="hide-blocked-sites">hide blocked sites</label>
+			<input type="checkbox" id="dark-mode-toggle"><br>	
+			<input id="block-domain" type="button" value="block this domain" title="works only with .com .org .net domains :(">
+			<input id="block-page" type="button" value="block this page">
+		</div>
+	
+		<div id="block-sites-container">	
+			<label for="list-sites">		
+			provide some sites/pages e.g <i>wikipedia.org</i><br>
+			separate them with new lines
+			</label>
+			<textarea id="list-sites" name="list-sites" cols="33" rows="10"></textarea>
+			
+			<input id="update" type="button" value="update">
+			<span id="updated">list updated</span>
+		</div>
+		<script src="js/popup.js"></script>
+	</body>
+</html>
