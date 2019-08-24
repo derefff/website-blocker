@@ -20,7 +20,7 @@ chrome.storage.local.get(['checkbox:dark-mode'], result=>{
 	toggle_dark_mode()
 })
 chrome.storage.local.get(['sites-list'], result=>{
-		if(result) textarea.value = result['sites-list'] 
+		if(result['sites-list']) textarea.value = result['sites-list'] 
 })
 
 let sites = []

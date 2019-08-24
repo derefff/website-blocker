@@ -1,6 +1,7 @@
 {
-	"name": "site blocker",
-	"version": "0.1",
+	"name": "website blocker",
+	"description": "extension that blocks chosen websites",
+	"version": "1.0",
 	"permissions": ["tabs", "storage"],
 	"background":{
 		"scripts": ["js/background.js"],
